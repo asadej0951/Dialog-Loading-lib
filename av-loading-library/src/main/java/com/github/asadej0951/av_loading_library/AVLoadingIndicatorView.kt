@@ -79,9 +79,24 @@ class AVLoadingIndicatorView : View {
             a.getDimensionPixelSize(R.styleable.AVLoadingIndicatorView_minHeight, mMinHeight)
         mMaxHeight =
             a.getDimensionPixelSize(R.styleable.AVLoadingIndicatorView_maxHeight, mMaxHeight)
-        val indicatorName = a.getString(R.styleable.AVLoadingIndicatorView_indicatorName)
+
+
+        var indicatorName = "BallScaleMultipleIndicator"
+        indicatorName = when (a.getInteger(R.styleable.AVLoadingIndicatorView_indicatorName, 0)) {
+            0 -> "BallClipRotateIndicator"
+            1 -> "BallClipRotateMultipleIndicator"
+            2 -> "BallClipRotatePulseIndicator"
+            3 -> "BallGridBeatIndicator"
+            4 -> "BallGridPulseIndicator"
+            5 -> "BallPulseIndicator"
+            6 -> "BallPulseRiseIndicator"
+            7 -> "BallPulseSyncIndicator"
+            8 -> "BallScaleMultipleIndicator"
+            else -> "BallBeatIndicator"
+        }
+
         mIndicatorColor = a.getColor(R.styleable.AVLoadingIndicatorView_indicatorColor, Color.WHITE)
-        setIndicator(indicatorName!!)
+        setIndicator(indicatorName)
         if (mIndicator == null) {
             indicator = DEFAULT_INDICATOR
         }
@@ -89,7 +104,7 @@ class AVLoadingIndicatorView : View {
     }
 
     //need to set indicator color again if you didn't specified when you update the indicator .
-     var indicator: Indicator?
+    var indicator: Indicator?
         get() = mIndicator
         set(d) {
             if (mIndicator !== d) {

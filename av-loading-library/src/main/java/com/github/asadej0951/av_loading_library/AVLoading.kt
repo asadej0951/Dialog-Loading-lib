@@ -6,7 +6,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatDialog
-import com.github.asadej0951.av_loading_library.indicators.BallPulseIndicator
+import com.github.asadej0951.av_loading_library.indicators.*
 
 @SuppressLint("StaticFieldLeak")
 object AVLoading {
@@ -33,17 +33,16 @@ object AVLoading {
             dialog!!.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             if(type != null){
                 when (type) {
-//                    TypeIndicator.BallBeatIndicator -> loader.indicator = BallBeatIndicator()
-//                    TypeIndicator.BallClipRotateIndicator -> loader.indicator = BallClipRotateIndicator()
-//                    TypeIndicator.BallClipRotateMultipleIndicator -> loader.indicator = BallClipRotateMultipleIndicator()
-//                    TypeIndicator.BallClipRotatePulseIndicator -> loader.indicator = BallClipRotatePulseIndicator()
-//                    TypeIndicator.BallGridBeatIndicator -> loader.indicator = BallGridBeatIndicator()
-//                    TypeIndicator.BallGridPulseIndicator -> loader.indicator = BallGridPulseIndicator()
+                    TypeIndicator.BallBeatIndicator -> loader.indicator = BallBeatIndicator()
+                    TypeIndicator.BallClipRotateIndicator -> loader.indicator = BallClipRotateIndicator()
+                    TypeIndicator.BallClipRotateMultipleIndicator -> loader.indicator = BallClipRotateMultipleIndicator()
+                    TypeIndicator.BallClipRotatePulseIndicator -> loader.indicator = BallClipRotatePulseIndicator()
+                    TypeIndicator.BallGridBeatIndicator -> loader.indicator = BallGridBeatIndicator()
+                    TypeIndicator.BallGridPulseIndicator -> loader.indicator = BallGridPulseIndicator()
                     TypeIndicator.BallPulseIndicator -> loader.indicator = BallPulseIndicator()
-//                    TypeIndicator.BallPulseRiseIndicator -> loader.indicator = BallPulseRiseIndicator()
-//                    TypeIndicator.BallPulseSyncIndicator -> loader.indicator = BallPulseSyncIndicator()
-//
-//                    TypeIndicator.BallScaleMultipleIndicator -> loader.indicator = BallScaleMultipleIndicator()
+                    TypeIndicator.BallPulseRiseIndicator -> loader.indicator = BallPulseRiseIndicator()
+                    TypeIndicator.BallPulseSyncIndicator -> loader.indicator = BallPulseSyncIndicator()
+                    TypeIndicator.BallScaleMultipleIndicator -> loader.indicator = BallScaleMultipleIndicator()
                     else -> {}
                 }
             }

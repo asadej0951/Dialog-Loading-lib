@@ -5,7 +5,19 @@
         <attr name="maxWidth" format="dimension"/>
         <attr name="minHeight" format="dimension" />
         <attr name="maxHeight" format="dimension"/>
-        <attr name="indicatorName" format="string"/>
         <attr name="indicatorColor" format="color"/>
+
+        <attr name="indicatorName" >
+            <enum name="BallClipRotateIndicator" value="0"/>
+            <enum name="BallClipRotateMultipleIndicator" value="1"/>
+            <enum name="BallClipRotatePulseIndicator" value="2"/>
+            <enum name="BallGridBeatIndicator" value="3"/>
+            <enum name="BallGridPulseIndicator" value="4"/>
+            <enum name="BallPulseIndicator" value="5"/>
+            <enum name="BallPulseRiseIndicator" value="6"/>
+            <enum name="BallPulseSyncIndicator" value="7"/>
+            <enum name="BallScaleMultipleIndicator" value="8"/>
+            <enum name="BallBeatIndicator" value="9"/>
+        </attr>
     </declare-styleable>
 </resources>
